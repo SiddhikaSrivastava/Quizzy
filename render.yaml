@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: Quizzy
+    env: java
+    plan: free
+    buildCommand: mvn clean package
+    startCommand: java -jar target/Quizzy.jar
+    envVars:
+      - key: PORT
+        value: 8080
